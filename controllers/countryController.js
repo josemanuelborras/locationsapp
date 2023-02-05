@@ -62,17 +62,6 @@ export const getCountryByNumeric_code = (req, res) => {
 // For POST only - create new Country data
 export const newCountry = (req, res) => {
 
-    const params = req.body;
-    console.log(params.id);
-
-    if(!params.id) return res.status(200).json({message: 'Need to set an ID for the Country'});
-    // if(!params.name) return res.status(200).json({message: 'Need to set a NAME for the Country'});
-    // console.log('---------');
-    // console.log(getCountryByNumeric_code('032'));
-    // console.log('---------');
-    // if(getCountryByNumeric_code(params.id)) return res.status(200).json({ message: 'Country already exists for this ISO CODE'});
-
-    return res.status(200).json({message: params.id});
-
+    res.status(200).send({message: 'Hi from countryController'});
 
 }
